@@ -1,6 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://chatem-frontend.vercel.app", "http://localhost:5173", "http://localhost:3000", "wss://evening-headland-99649-ad144f8efa52.herokuapp.com"
+    origins "https://chatem-frontend.vercel.app", "http://localhost:5173", "http://localhost:3000", "https://evening-headland-99649-ad144f8efa52.herokuapp.com"
 
     resource "*",
       headers: :any,
