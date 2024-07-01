@@ -43,7 +43,14 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   config.action_cable.url = "wss://evening-headland-99649-ad144f8efa52.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = [ "https://chatem-frontend.vercel.app", /https:\/\/chatem-frontend.vercel.app.*/ ]
+  config.action_cable.allowed_request_origins = [
+    "https://chatem-frontend.vercel.app",
+    "production-sfo.browserless.io",
+    "production-lon.browserless.io",
+    /https:\/\/chatem-frontend.vercel.app.*/,
+    /https:\/\/production-sfo.browserless.io.*/,
+    /https:\/\/production-lon.browserless.io.*/
+  ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
